@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Card from './Card';
+import CardList from './CardList';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 import { robots } from'./robots'
@@ -9,13 +10,10 @@ import { robots } from'./robots'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-  <React.StrictMode>
-    <Card id={robots[0].id} name={robots[0].name} email={robots[0].email}/>
-    <Card id={robots[1].id} name={robots[1].name} email={robots[1].email}/>
-    <Card id={robots[2].id} name={robots[2].name} email={robots[2].email}/>
-    <Card id={robots[3].id} name={robots[3].name} email={robots[3].email}/>
-  </React.StrictMode>
-  </div>
+     <React.StrictMode>
+       <CardList robots={robots}/>
+     </React.StrictMode>
+ </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
